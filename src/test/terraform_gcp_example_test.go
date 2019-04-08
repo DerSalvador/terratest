@@ -18,7 +18,7 @@ import (
 func TestTerraformGcpExample(t *testing.T) {
 	t.Parallel()
 
-	exampleDir := test_structure.CopyTerraformFolderToTemp(t, "../", "examples/terraform-gcp-example")
+	exampleDir := test_structure.CopyTerraformFolderToTemp(t, "../../", "examples/terraform-gcp-example")
 
 	// Get the Project Id to use
 	projectId := gcp.GetGoogleProjectIDFromEnvVar(t)
