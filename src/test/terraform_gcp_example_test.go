@@ -24,7 +24,7 @@ func TestTerraformGcpExample(t *testing.T) {
 	projectId := gcp.GetGoogleProjectIDFromEnvVar(t)
 
 	// Create all resources in the following zone
-	zone := "us-east1-b"
+	zone := "us-west1-b"
 
 	// Give the example bucket a unique name so we can distinguish it from any other bucket in your GCP account
 	expectedBucketName := fmt.Sprintf("terratest-gcp-example-%s", strings.ToLower(random.UniqueId()))
@@ -95,7 +95,7 @@ func TestTerraformGcpExample(t *testing.T) {
 func TestSshAccessToComputeInstance(t *testing.T) {
 	t.Parallel()
 
-	exampleDir := test_structure.CopyTerraformFolderToTemp(t, "../", "examples/terraform-gcp-example")
+	exampleDir := test_structure.CopyTerraformFolderToTemp(t, "../../", "examples/terraform-gcp-example")
 
 	// Setup values for our Terraform apply
 	projectID := gcp.GetGoogleProjectIDFromEnvVar(t)

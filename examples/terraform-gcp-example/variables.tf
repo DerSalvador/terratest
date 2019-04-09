@@ -33,15 +33,15 @@ variable "machine_type" {
 
 variable "zone" {
   description = "The Zone to launch the Cloud Instance into."
-  default     = "us-central1-a"
+  default     = "us-west1-b"
 }
 
 variable "bucket_name" {
   description = "The Name of the example Bucket to create."
-  default     = "gruntwork-terratest-bucket"
+  default     = "terratestbucket"
 }
 
 variable "bucket_location" {
   description = "The location to store the Bucket. This value can be regional or multi-regional."
-  default     = "US"
+  default     = "EU"
 }
